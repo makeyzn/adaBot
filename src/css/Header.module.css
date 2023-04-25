@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Istok+Web:wght@700&display=swap");
+.header {
+  display: flex;
+  background-color: var(--purple);
+  padding: 20px 0;
+  align-items: center;
+  margin-bottom: 250px;
+}
+.header a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.logo {
+  font-size: 40px;
+  font-family: "Istok Web";
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navBtn {
+  margin-right: 40px;
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: var(--fw-normal);
+}
+.navBtn:last-child {
+  margin-right: 0px;
+}/*# sourceMappingURL=Header.module.css.map */
