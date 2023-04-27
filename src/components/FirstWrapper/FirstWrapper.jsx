@@ -8,6 +8,7 @@ import messanger from 'image/messanger.png';
 import Discord from 'image/Discord.png';
 import github from 'image/github.png';
 import arrow from 'image/arrow.svg';
+import working from 'image/working.svg'
 
 
 const FirstWrapper = () => {
@@ -25,7 +26,7 @@ const FirstWrapper = () => {
           <hr />
           <h2>Hell Bot, a bot based on artificial intelligence with<br/>wide possibilities for managing a smart home,<br/>smart devices and something else smart.</h2>
           <div className={classes.icons}>
-            <a href=""><img src={YouTube} alt="YouTube" /></a>
+            <a href=""><img src={working} alt="YouTube" /></a>
             <a href=""><img src={Instagram} alt="Instagram" /></a>
             <a href=""><img src={messanger} alt="messanger" /></a>
             <a href=""><img src={Discord} alt="Discord" /></a>
