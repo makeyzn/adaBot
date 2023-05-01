@@ -4,6 +4,7 @@ import './index.css';
 import FirstWrapper from './components/FirstWrapper/FirstWrapper';
 import SecondWrapper from 'components/SecondWrapper/SecondWrapper';
 import ThirdWrapper from 'components/ThirdWrapper/ThirdWrapper';
+import Swiper from 'components/Swiper/Swiper';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -11,6 +12,7 @@ root.render(
     <FirstWrapper />
     <SecondWrapper />
     <ThirdWrapper />
+    <Swiper />
   </React.StrictMode>
 );
 
