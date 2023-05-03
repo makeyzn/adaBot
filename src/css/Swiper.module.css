@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Bayon&display=swap");
+.slide {
+  background-image: url("slide1.png");
+  height: 100vh;
+  background-size: 100%;
+  color: #fff;
+}
+.slide h2 {
+  font-size: 64px;
+  line-height: 60px;
+  font-family: "Bayon";
+}
+.slide h1 {
+  font-family: var(--inter);
+  font-size: 128px;
+  padding-bottom: 30px;
+}
+.slide p {
+  font-family: var(--inter);
+  font-size: 18px;
+}
+
+.slide__text {
+  display: flex;
+  justify-content: space-between;
+}
+.slide__text_end {
+  margin-top: 700px;
+}
+.slide__text h2 {
+  margin-top: 100px;
+}
+.slide__text hr {
+  margin-bottom: 20px;
+}
+
+.swiper {
+  margin-bottom: 170px;
+}/*# sourceMappingURL=Swiper.module.css.map */

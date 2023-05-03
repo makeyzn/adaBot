@@ -5,6 +5,7 @@ import FirstWrapper from './components/FirstWrapper/FirstWrapper';
 import SecondWrapper from 'components/SecondWrapper/SecondWrapper';
 import ThirdWrapper from 'components/ThirdWrapper/ThirdWrapper';
 import Swiper from 'components/Swiper/Swiper';
+import AccordionPage from './components/Accordion/AccordionPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,6 +14,7 @@ root.render(
     <SecondWrapper />
     <ThirdWrapper />
     <Swiper />
+    <AccordionPage />
   </React.StrictMode>
 );
 
