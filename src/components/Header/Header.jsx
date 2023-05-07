@@ -1,17 +1,15 @@
-import React from 'react'
+import React from 'react';
 import classes from './Header.module.sass';
+import Navbar from 'components/Navbar/Navbar';
 
 const Header = () => {
   return (
     <>
     <header className={`${classes.header}`}>
-        <a href="#" className={classes.logo}>ADA</a>
-        <div className={`${classes.nav} container`}>
-          <a href="#" className={classes.navBtn}>Home</a>
-          <a href="#" className={classes.navBtn}>Developers</a>
-          <a href="#" className={classes.navBtn}>Contacts</a>
+        <div className={`container ${classes.nav}` }>
+          <a href="#" className={`logo ${classes.logo}`}>ADA</a>
+          <Navbar classType={classes.navHeader}/>
         </div>
-        <button>ENG</button>
     </header>
     </>
   )

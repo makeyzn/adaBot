@@ -5,7 +5,9 @@
     background-color: var(--purple)
     padding: 20px 0
     align-items: center
-    margin-bottom: 250px
+    position: sticky
+    top: 0
+    z-index: 999
     a
         text-decoration: none
         color: #fff
@@ -14,10 +16,11 @@
 .logo
     font-size: 40px
     font-family: 'Istok Web'
+    color: #fff
 
 .nav
     display: flex
-    justify-content: flex-end
+    justify-content: space-between
 
 .navBtn
     margin-right: 40px
@@ -26,3 +29,12 @@
     font-weight: var(--fw-normal)
     &:last-child
         margin-right: 0px
+
+.navHeader
+  font-size: 18px
+  font-weight: var(--fw-normal)
+    display: flex
+  a
+    margin-right: 40px
+    &:last-child
+        margin-right: 0

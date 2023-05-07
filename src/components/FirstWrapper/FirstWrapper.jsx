@@ -13,8 +13,7 @@ import working from 'image/working.svg'
 
 const FirstWrapper = () => {
   return (
-    <div className={`${classes.fw} cont-out`}>
-      <Header />
+    <div className={`${classes.fw} cont-out`} id='home'>
       <div className={classes.fwContainer}>
         <div className={classes.cicles}>
           <Cicles />
