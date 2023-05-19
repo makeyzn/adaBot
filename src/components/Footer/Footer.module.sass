@@ -56,9 +56,44 @@
         font-size: 14px
         border-bottom: 1px solid rgba(255, 255, 255, 1)
 
-.logo
-    position: absolute
-    transform: translateX(-220px)
-
 .flex
     display: flex
+
+.padding
+    padding: 20px 0
+
+@media (max-width: 1199px)
+    .footer
+        display: block
+        h2
+            font-size: 32px
+        input
+            font-size: 16px
+            &::placeholder
+                font-size: 16px
+        &__container_mail
+            font-size: 18px
+        &__container
+            margin-top: 30px
+        &__letter
+            font-size: 16px
+    .navbar
+        font-size: 21px
+
+@media (max-width: 430px)
+    .footer
+        padding-bottom: 20px
+        h2
+            font-size: 24px
+            margin-bottom: 30px
+        &__container
+            display: block
+        &__container_mail
+            margin-bottom: 100px
+        &__letter
+            display: none
+    .navbar
+        font-size: 24px
+        margin-bottom: 50px
+        a
+            margin-bottom: 20px

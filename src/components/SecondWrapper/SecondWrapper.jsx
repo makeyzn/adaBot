@@ -30,7 +30,6 @@ const SecondWrapper = () => {
                     <a href="#">download the <br />installation file</a>
                 </div>
             </div>
-            
         </div>
     </div>
   )

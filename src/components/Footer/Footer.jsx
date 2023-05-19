@@ -4,9 +4,9 @@ import Navbar from 'components/Navbar/Navbar';
 
 const Footer = () => {
   return (
-    <footer className={`${classes.footer}`} id='contacts'>
+    <footer className={`${classes.footer} cont-out`} id='contacts'>
+      <a href="#" className={`${classes.logo} logo`}>ADA</a>
       <div className='container'>
-        <a href="" className={`${classes.logo} logo`}>ADA</a>
         <div className={`${classes.footer__container} container`}>
           <div className={classes.footer__container_left}>
             <Navbar classType={classes.navbar}/>
