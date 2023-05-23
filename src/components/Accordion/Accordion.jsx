@@ -1,93 +1,225 @@
-import React, { useState } from 'react'
-import chevronDown from 'image/chevron-down.svg';
-import chevronUp from 'image/chevron-up.svg';
-import classes from './Accordion.module.sass';
+import { Fragment, useState } from "react";
+import {
+  Accordion,
+  AccordionHeader,
+  AccordionBody,
+} from "@material-tailwind/react";
+import "./../../index.css";
+import classes from "./Accordion.module.sass";
 
-const Accordion = () => {
-    const [selected, setSelected] = useState(null);
+function Icon({ id, open }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={`${
+        id === open ? "rotate-180" : ""
+      } h-5 w-5 transition-transform`}
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      strokeWidth={2}
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+    </svg>
+  );
+}
 
-    const toggle = i => {
-        if (selected === i) {
-            return setSelected(null)
-        }
+export default function Example() {
+  const [open, setOpen] = useState(0);
 
-        setSelected(i)
-    }
+  const handleOpen = (value) => {
+    setOpen(open === value ? 0 : value);
+  };
 
   return (
     <>
-      <div className='container'>
-        <div>
-            {data.map((item, i) => (
-                <div className={classes.item}>
-                    <div className={classes.title} onClick={() => toggle(i)}>
-                        <h2>{item.position}</h2>
-                        <img src={selected === i ? chevronUp : chevronDown} alt="" />
-                    </div>
-                    <hr />
-                    <div className={selected === i ? classes.content__show : classes.content}>
-                        <h1>{item.name}</h1>
-                        <h3>{item.nickname}</h3>
-                        <hr />
-                        <a href={`mailto:${item.email}`}>{item.email}</a>
-                    </div>
-                </div>
+      {data.map((item) => (
+        <Accordion
+          open={open === item.id}
+          icon={<Icon id={item.id} open={open} />}
+          key={item.id}
+        >
+          <AccordionHeader
+            onClick={() => handleOpen(item.id)}
+            className="font-inter"
+          >
+            <h2 className="font-inter text-black ">{item.position}</h2>
+          </AccordionHeader>
+          <AccordionBody className="flex">
+            {item.humans.map((human) => (
+              <div key={human.email} className="mr-8">
+                <h1 className="font-inter text-3xl">{human.name}</h1>
+                <h3 className="font-inter text-lg">{human.nickname}</h3>
+                <hr className="max-w-xs" />
+                <a href={`mailto:${human.email}`} className="font-inter text-lg">
+                  {human.email}
+                </a>
+              </div>
             ))}
-        </div>
-      </div>
+          </AccordionBody>
+        </Accordion>
+      ))}
     </>
-  )
+  );
 }
 
-export default Accordion
-
 const data = [
-    {
-        position: 'Lead Developer',
-        name: 'Bogdan Tanov',
-        nickname: 'NullGuy \ HCoder',
-        email: 'playmister00@gmail.com',
-    },
-    {
-        position: 'Back-end Developer',
-        name: 'Bogdan Tanov',
-        nickname: 'NullGuy \ HCoder',
-        email: 'playmister00@gmail.com',
-    },
-    {
-        position: 'Front-end Developer',
-        name: 'Bogdan Tanov',
-        nickname: 'NullGuy \ HCoder',
-        email: 'playmister00@gmail.com',
-    },
-    {
-        position: 'Lead Designer',
-        name: 'Bogdan Tanov',
-        nickname: 'NullGuy \ HCoder',
-        email: 'playmister00@gmail.com',
-    },
-    {
-        position: 'Python Developer',
-        name: 'Bogdan Tanov',
-        nickname: 'NullGuy \ HCoder',
-        email: 'playmister00@gmail.com',
-    },
-    {
-        position: 'C# Developer',
-        name: 'Bogdan Tanov',
-        nickname: 'NullGuy \ HCoder',
-        email: 'playmister00@gmail.com',
-    },
-    {
-        position: 'C++ Developer',
-        name: 'Bogdan Tanov',
-        nickname: 'NullGuy \ HCoder',
-        email: 'playmister00@gmail.com',
-    },
-    {
-        position: 'Designer',
-        name: 'Bogdan Tanov',
-        nickname: 'NullGuy \ HCoder',
-        email: 'playmister00@gmail.com',
-    },
-]
+  {
+    id: 1,
+    position: "Lead Developer",
+    humans: [
+      {
+        name: "Bogdan Tanov",
+        nickname: "NullGuy  HCoder",
+        email: "playmister00@gmail.com",
+      },
+    ],
+  },
+  {
+    id: 2,
+    position: "Back-end Developer",
+    humans: [
+      {
+        name: "Bogdan Tanov",
+        nickname: "NullGuy  HCoder",
+        email: "playmister00@gmail.com",
+      },
+      {
+        name: "Bogdan Tanov",
+        nickname: "NullGuy  HCoder",
+        email: "playmister00@gmail.com1",
+      },
+      {
+        name: "Bogdan Tanov",
+        nickname: "NullGuy  HCoder",
+        email: "playmister00@gmail.com2",
+      },
+    ],
+  },
+  {
+    id: 3,
+    position: "Front-end Developer",
+    humans: [
+      {
+        name: "Bogdan Tanov",
+        nickname: "NullGuy  HCoder",
+        email: "playmister00@gmail.com",
+      },
+      {
+        name: "Bogdan Tanov",
+        nickname: "NullGuy  HCoder",
+        email: "playmister00@gmail.com1",
+      },
+      {
+        name: "Bogdan Tanov",
+        nickname: "NullGuy  HCoder",
+        email: "playmister00@gmail.com2",
+      },
+    ],
+  },
+  {
+    id: 4,
+    position: "Lead Designer",
+    humans: [
+      {
+        name: "Bogdan Tanov",
+        nickname: "NullGuy  HCoder",
+        email: "playmister00@gmail.com",
+      },
+      {
+        name: "Bogdan Tanov",
+        nickname: "NullGuy  HCoder",
+        email: "playmister00@gmail.com1",
+      },
+      {
+        name: "Bogdan Tanov",
+        nickname: "NullGuy  HCoder",
+        email: "playmister00@gmail.com2",
+      },
+    ],
+  },
+  {
+    id: 5,
+    position: "Python Developer",
+    humans: [
+      {
+        name: "Bogdan Tanov",
+        nickname: "NullGuy  HCoder",
+        email: "playmister00@gmail.com",
+      },
+      {
+        name: "Bogdan Tanov",
+        nickname: "NullGuy  HCoder",
+        email: "playmister00@gmail.com1",
+      },
+      {
+        name: "Bogdan Tanov",
+        nickname: "NullGuy  HCoder",
+        email: "playmister00@gmail.com2",
+      },
+    ],
+  },
+  {
+    id: 6,
+    position: "C# Developer",
+    humans: [
+      {
+        name: "Bogdan Tanov",
+        nickname: "NullGuy  HCoder",
+        email: "playmister00@gmail.com",
+      },
+      {
+        name: "Bogdan Tanov",
+        nickname: "NullGuy  HCoder",
+        email: "playmister00@gmail.com1",
+      },
+      {
+        name: "Bogdan Tanov",
+        nickname: "NullGuy  HCoder",
+        email: "playmister00@gmail.com2",
+      },
+    ],
+  },
+  {
+    id: 7,
+    position: "C++ Developer",
+    humans: [
+      {
+        name: "Bogdan Tanov",
+        nickname: "NullGuy  HCoder",
+        email: "playmister00@gmail.com",
+      },
+      {
+        name: "Bogdan Tanov",
+        nickname: "NullGuy  HCoder",
+        email: "playmister00@gmail.com1",
+      },
+      {
+        name: "Bogdan Tanov",
+        nickname: "NullGuy  HCoder",
+        email: "playmister00@gmail.com2",
+      },
+    ],
+  },
+  {
+    id: 8,
+    position: "Designer",
+    humans: [
+      {
+        name: "Bogdan Tanov",
+        nickname: "NullGuy  HCoder",
+        email: "playmister00@gmail.com",
+      },
+      {
+        name: "Bogdan Tanov",
+        nickname: "NullGuy  HCoder",
+        email: "playmister00@gmail.com1",
+      },
+      {
+        name: "Bogdan Tanov",
+        nickname: "NullGuy  HCoder",
+        email: "playmister00@gmail.com2",
+      },
+    ],
+  },
+];

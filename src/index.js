@@ -9,16 +9,20 @@ import AccordionPage from './components/Accordion/AccordionPage';
 import Footer from 'components/Footer/Footer';
 import Header from 'components/Header/Header';
 
+import { ThemeProvider } from "@material-tailwind/react";
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Header />
-    <FirstWrapper />
-    <SecondWrapper />
-    <ThirdWrapper />
-    <Swiper />
-    <AccordionPage />
-    <Footer />
+        <ThemeProvider>
+          <Header />
+          <FirstWrapper />
+          <SecondWrapper />
+          <ThirdWrapper />
+          <Swiper />
+          <AccordionPage />
+          <Footer />
+        </ThemeProvider>
   </React.StrictMode>
 );
 

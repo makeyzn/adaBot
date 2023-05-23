@@ -12,7 +12,7 @@ const Footer = () => {
             <Navbar classType={classes.navbar}/>
             <a href={`mailto:Playmister00@gmail.com`} className={classes.footer__container_mail}>Playmister00@gmail.com</a>
           </div>
-          <div>
+          <div></div>
             <h2>
               Leave us a message if <br/>you find an error on the <br/>website or in the bot
             </h2>
