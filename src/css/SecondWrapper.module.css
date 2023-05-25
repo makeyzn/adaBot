@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding-bottom: 220px;
+  padding-bottom: 20vh;
 }
 .secondWrapper h1 {
   font-weight: var(--fw-bold);
@@ -88,4 +88,50 @@
   font-style: italic;
   color: var(--purple);
   font-size: 16px;
+}
+
+@media (max-width: 1199px) {
+  .secondWrapper h1 {
+    font-size: 36px;
+  }
+  .info {
+    width: 400px;
+  }
+}
+@media (max-width: 430px) {
+  .secondWrapper {
+    display: block;
+    position: relative;
+    margin-bottom: 70px;
+  }
+  .secondWrapper h1 {
+    margin-bottom: 50px;
+  }
+  .secondWrapper h2 {
+    margin-bottom: 50px;
+  }
+  .secondWrapper hr {
+    margin-right: 20px;
+  }
+  .secondWrapper__rightHalf {
+    width: 100%;
+    padding: 0;
+  }
+  .secondWrapper__leftHalf br {
+    display: none;
+  }
+  .info {
+    width: 100%;
+    position: absolute;
+    bottom: 25px;
+  }
+  .setups {
+    margin-right: 20px;
+  }
+  .setups h4 {
+    font-size: 18px;
+  }
+  .setup {
+    margin-bottom: 35px;
+  }
 }/*# sourceMappingURL=SecondWrapper.module.css.map */

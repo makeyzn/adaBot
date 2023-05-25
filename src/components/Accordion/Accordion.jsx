@@ -45,10 +45,10 @@ export default function Example() {
           >
             <h2 className="font-inter text-black ">{item.position}</h2>
           </AccordionHeader>
-          <AccordionBody className="flex">
+          <AccordionBody className="grid grid-cols-2 gap-2 justify-items-center">
             {item.humans.map((human) => (
-              <div key={human.email} className="mr-8">
-                <h1 className="font-inter text-3xl">{human.name}</h1>
+              <div key={human.email} className="mr-8 mb-10 ">
+                <h1 className="font-inter text-3xl pt-5">{human.name}</h1>
                 <h3 className="font-inter text-lg">{human.nickname}</h3>
                 <hr className="max-w-xs" />
                 <a href={`mailto:${human.email}`} className="font-inter text-lg">

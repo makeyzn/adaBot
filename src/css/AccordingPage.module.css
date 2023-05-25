@@ -1,19 +1,19 @@
-.popup {
+.accordion {
   font-family: var(--inter);
-  padding-bottom: 133px;
+  padding-bottom: 15vh;
 }
-.popup h1 {
+.accordion h1 {
   margin-bottom: 40px;
   font-size: 48px;
   color: var(--dark);
   font-weight: var(--fw-bold);
 }
-.popup p {
+.accordion p {
   font-size: 18px;
   color: #505050;
   margin-bottom: 80px;
 }
-.popup hr {
+.accordion hr {
   color: #505050;
   margin-bottom: 30px;
 }/*# sourceMappingURL=AccordingPage.module.css.map */

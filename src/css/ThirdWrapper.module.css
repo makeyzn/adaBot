@@ -1,8 +1,8 @@
 .thirdWrapper {
   font-family: var(--inter);
-  padding-bottom: 180px;
+  padding-bottom: 10vh;
   background-color: #F8F8F8;
-  padding-top: 180px;
+  padding-top: 10vh;
 }
 .thirdWrapper h1 {
   font-size: 48px;
@@ -42,4 +42,42 @@
   justify-content: space-between;
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(2, auto);
+}
+
+@media (max-width: 1199px) {
+  .thirdWrapper h1 {
+    font-size: 36px;
+  }
+  .thirdWrapper h2 {
+    font-size: 20px;
+  }
+  .thirdWrapper p {
+    font-size: 18px;
+  }
+  .thirdWrapper p br {
+    display: none;
+  }
+}
+@media (max-width: 430px) {
+  .thirdWrapper {
+    padding-top: 70px;
+  }
+  .thirdWrapper h1 {
+    margin-bottom: 20px;
+  }
+  .cards {
+    display: flex;
+    flex-direction: column;
+  }
+  .card {
+    margin-bottom: 20px;
+  }
+  .card br {
+    display: none;
+  }
+  .title {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+  }
 }/*# sourceMappingURL=ThirdWrapper.module.css.map */

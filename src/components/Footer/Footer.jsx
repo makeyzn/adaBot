@@ -12,14 +12,14 @@ const Footer = () => {
             <Navbar classType={classes.navbar}/>
             <a href={`mailto:Playmister00@gmail.com`} className={classes.footer__container_mail}>Playmister00@gmail.com</a>
           </div>
-          <div></div>
+          <div>
             <h2>
               Leave us a message if <br/>you find an error on the <br/>website or in the bot
             </h2>
             <form action="" className={classes.form}>
-              <input type="text" placeholder='Name'/>
-              <input type="text" placeholder='Telephone (Optional)'/>
-              <input type="text" placeholder='Your message'/>
+              <input type="text" name="name" placeholder='Name'/>
+              <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required placeholder='Telephone (Optional)'/>
+              <input type="text" name="message" placeholder='Your message'/>
               <button>To send</button>
             </form>
           </div>

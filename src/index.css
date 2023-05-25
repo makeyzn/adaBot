@@ -83,19 +83,19 @@ table {
 
 @media (max-width: 1199px) {
   .container {
-    width: 960px;
+    max-width: 960px;
   }
 }
 
 @media (max-width: 991px) {
   .container {
-    width: 760px;
+    max-width: 760px;
   }
 }
 
 @media (max-width: 430px) {
   .container {
-    width: 360px;
+    max-width: 360px;
   }
   .cont-out {
     padding: 0px 35px;
