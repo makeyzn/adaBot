@@ -80,6 +80,15 @@ table {
   color: #fff;
   text-decoration: none;
 }
+.adminBtn {
+  font-family: var(--inter);
+  font-size: 14px;
+  font-weight: var(--fw-bold);
+  border-bottom: 1px solid #fff;
+  margin-left: 40px;
+  white-space: nowrap;
+}
+
 
 @media (max-width: 1199px) {
   .container {
@@ -89,7 +98,13 @@ table {
 
 @media (max-width: 991px) {
   .container {
-    max-width: 760px;
+    max-width: 770px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 480px;
   }
 }
 
@@ -100,4 +115,7 @@ table {
   .cont-out {
     padding: 0px 35px;
   }
+  .adminBtn {
+    display: none;
+  }  
 }

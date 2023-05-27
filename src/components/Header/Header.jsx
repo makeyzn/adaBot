@@ -21,11 +21,10 @@ const Header = () => {
     <>
     <header className={`${classes.header} cont-out`}>
       <div className={`${classes.header__container}`}>
-        <a href="#" className={`logo ${classes.logo}`}>ADA</a>
-        <div className={`container ${nav ? [classes.nav, classes.active].join(' ') : [classes.nav]}` }>
-          <Navbar classType={classes.navHeader} handleClick={handleClick}/>
-          <Link to="/account">Admin account</Link>
-          <div className={classes.icons}>
+        <Link to='/' className={`logo ${classes.logo}`}>ADA</Link>
+        <div className={`container ${classes.nav}` }>
+          <Navbar classType={nav ? [classes.navHeader, classes.active].join(' ') : [classes.navHeader]} handleClick={handleClick}/>
+          <div className={nav ? [classes.icons, classes.active].join(' ') : [classes.icons]}>
             <a href=""><img src={YouTube} alt="YouTube" /></a>
             <a href=""><img src={Instagram} alt="Instagram" /></a>
             <a href=""><img src={messanger} alt="messanger" /></a>
@@ -36,6 +35,7 @@ const Header = () => {
         <button onClick={() => setNav(!nav)} className={classes.mobile_btn}>
           {nav ? <AiOutlineClose size={25}/> : <AiOutlineMenu size={25} />}
         </button>
+        <Link to="/account" className="adminBtn">Admin account</Link>
       </div>
     </header>
     </>

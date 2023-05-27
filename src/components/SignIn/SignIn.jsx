@@ -1,10 +1,11 @@
 import React from 'react'
 import classes from './SignIn.module.sass'
+import { Link } from 'react-router-dom'
 
 const SignIn = () => {
   return (
     <section className={`cont-out ${classes.signWrapper}`}>
-      <a href="#" className={`logo ${classes.signWrapper__logo}`}>ADA</a>
+      <Link to='/' className={`logo ${classes.signWrapper__logo}`}>ADA</Link>
       <hr />
       <div className={classes.signWrapper__formContainer}>
         <form action="">

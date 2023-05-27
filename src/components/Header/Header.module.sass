@@ -44,6 +44,9 @@
 .icons
   display: none
 
+.adminBtn
+  color: #000
+
 @media (max-width: 430px)
   .nav
     display: block
@@ -53,16 +56,21 @@
     z-index: 10
     height: 100vh
     background: rgba(0, 0, 0, 0.95)
-    top: 0
-    padding-left: 30%
-    width: 200%
 
   .navHeader
     display: flex
     flex-direction: column
     justify-content: start
     padding-top: 200px
-
+    position: fixed
+    left: -100%
+    top: 0
+    padding-left: 30%
+    z-index: 10
+    width: 100%
+    height: 100vh
+    background: rgba(0, 0, 0, 0.95)
+    transition: left 1s
     font-size: 40px
     a
       margin-bottom: 40px
@@ -72,11 +80,12 @@
     grid-template-columns: repeat(3, 30px)
     gap: 20px
     grid-template-rows: repeat(2, 20px)
-    
+    position: fixed
+    left: -100%
     padding-left: 37%
     top: 590px
-
-
+    transition: left 1s
+    z-index: 10
 
   .active
     left: 0
@@ -98,3 +107,4 @@
     // top: 20
     cursor: pointer
     z-index: 10
+
